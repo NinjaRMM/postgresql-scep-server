@@ -21,9 +21,9 @@ var version string
 
 func main() {
 	var (
-		flDSN       = flag.String("dsn", "postgresql://localhost:5432/scepdb?user=ninja&password=ninja777&sslmode=disable", "")
+		flDSN       = flag.String("dsn", "", "")
 		flAPIKey    = flag.String("api", "apisecret", "")
-		flChallenge = flag.String("challenge", "nanomdm", "nanomdm ")
+		flChallenge = flag.String("challenge", "", "")
 		flListen    = flag.String("listen", envString("SCEP_HTTP_LISTEN", ":8083"), "port to listen on")
 		flCAPass    = flag.String("capass", envString("SCEP_CA_PASS", "123apple"), "")
 		flDebug     = flag.Bool("debug", envBool("SCEP_LOG_DEBUG"), "enable debug logging")
